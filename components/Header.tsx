@@ -2,30 +2,33 @@ import Link from 'next/link'
 
 export default function Header() {
   return (
-    <header className="bg-pastel-blue border-b-2 border-gray-900">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <header className="bg-pastel-cream border-b border-neutral-200 sticky top-0 z-50 backdrop-blur-sm">
+      <div className="container-wide">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href="/" className="font-display font-black text-xl">
             BRUTAL<span className="neon-accent">.</span>
           </Link>
           
-          {/* Navigation */}
+          {/* Navigation - Desktop */}
           <nav className="hidden md:flex items-center space-x-8">
-            <Link href="#features" className="font-medium hover:text-neon-cyan transition-colors">
+            <Link 
+              href="#features" 
+              className="font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
               Features
             </Link>
-            <Link href="#about" className="font-medium hover:text-neon-cyan transition-colors">
-              About
-            </Link>
-            <Link href="#contact" className="font-medium hover:text-neon-cyan transition-colors">
-              Contact
+            <Link 
+              href="#proof" 
+              className="font-medium text-neutral-600 hover:text-neutral-900 transition-colors"
+            >
+              Proof
             </Link>
           </nav>
           
           {/* CTA Button */}
           <button className="btn-primary">
-            Get Started
+            Start Free
           </button>
         </div>
       </div>

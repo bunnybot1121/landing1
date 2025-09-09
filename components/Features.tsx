@@ -4,40 +4,42 @@ const features = [
   {
     icon: Rocket,
     title: 'Lightning Fast',
-    description: 'Optimized performance with zero configuration needed.'
+    description: 'Zero-config performance optimization.'
   },
   {
     icon: Shield,
     title: 'Rock Solid',
-    description: 'Built with modern standards and best practices.'
+    description: 'Built with modern web standards.'
   },
   {
     icon: Zap,
     title: 'Brutally Simple',
-    description: 'Clean code architecture that just works.'
+    description: 'Clean architecture that just works.'
   }
 ]
 
 export default function Features() {
   return (
-    <section id="features" className="section-spacing bg-pastel-mint">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="features" className="section-md bg-pastel-mint">
+      <div className="container-narrow">
+        {/* Section header */}
         <div className="text-center mb-16">
-          <h2 className="font-display font-black text-3xl md:text-4xl mb-4">
-            Why Choose <span className="neon-accent">Brutal</span>
+          <h2 className="font-display text-display-md mb-4">
+            Why <span className="neon-accent">Brutal</span>
           </h2>
         </div>
         
+        {/* Feature grid */}
         <div className="grid md:grid-cols-3 gap-8">
           {features.map((feature, index) => (
-            <div key={index} className="brutal-card p-8 text-center group hover:-translate-y-1 transition-transform duration-200">
+            <div key={index} className="card-minimal p-8 text-center">
               <div className="flex justify-center mb-6">
-                <feature.icon className="w-12 h-12 text-neon-cyan group-hover:scale-110 transition-transform duration-200" />
+                <feature.icon className="w-8 h-8 text-neon-cyan" />
               </div>
-              <h3 className="font-display font-bold text-xl mb-4">
+              <h3 className="font-display font-bold text-lg mb-3">
                 {feature.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed">
+              <p className="text-neutral-600 text-sm leading-relaxed">
                 {feature.description}
               </p>
             </div>

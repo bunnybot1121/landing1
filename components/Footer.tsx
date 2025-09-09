@@ -2,30 +2,27 @@ import Link from 'next/link'
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+    <footer className="bg-neutral-900 text-white py-12">
+      <div className="container-wide">
+        <div className="flex flex-col md:flex-row justify-between items-center gap-6">
           {/* Logo */}
-          <div className="font-display font-black text-xl mb-4 md:mb-0">
+          <div className="font-display font-black text-lg">
             BRUTAL<span className="neon-accent">.</span>
           </div>
           
           {/* Links */}
-          <nav className="flex space-x-8 mb-4 md:mb-0">
-            <Link href="/privacy" className="text-gray-400 hover:text-white transition-colors">
+          <nav className="flex space-x-8">
+            <Link href="/privacy" className="text-neutral-400 hover:text-white transition-colors text-sm">
               Privacy
             </Link>
-            <Link href="/terms" className="text-gray-400 hover:text-white transition-colors">
+            <Link href="/terms" className="text-neutral-400 hover:text-white transition-colors text-sm">
               Terms
-            </Link>
-            <Link href="/support" className="text-gray-400 hover:text-white transition-colors">
-              Support
             </Link>
           </nav>
           
           {/* Copyright */}
-          <div className="text-gray-400 text-sm">
-            © 2024 Brutal. All rights reserved.
+          <div className="text-neutral-400 text-xs">
+            © 2024 Brutal
           </div>
         </div>
       </div>

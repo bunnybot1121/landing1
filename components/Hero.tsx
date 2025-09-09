@@ -2,44 +2,41 @@ import { ArrowRight, Zap } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="section-spacing bg-pastel-pink relative overflow-hidden">
-      {/* Geometric accent */}
-      <div className="absolute top-20 right-10 w-20 h-20 bg-neon-yellow opacity-20 rotate-45 hidden lg:block"></div>
-      <div className="absolute bottom-20 left-10 w-16 h-16 bg-neon-pink opacity-20 rotate-12 hidden lg:block"></div>
+    <section className="section-lg bg-pastel-cream relative overflow-hidden">
+      {/* Minimal geometric accents */}
+      <div className="geometric-accent top-20 right-20 w-12 h-12 bg-neon-pink hidden lg:block"></div>
+      <div className="geometric-accent bottom-32 left-20 w-8 h-8 bg-neon-green hidden lg:block"></div>
       
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          {/* Hero headline */}
-          <h1 className="font-display font-black text-4xl md:text-6xl lg:text-7xl leading-tight mb-6">
-            Build Bold,
+      <div className="container-narrow">
+        <div className="text-center">
+          {/* Hero headline - clear and confident */}
+          <h1 className="font-display text-display-xl mb-6 leading-none">
+            Ship Bold,
             <br />
-            <span className="neon-accent">Ship Fast</span>
+            <span className="neon-accent">Build Fast</span>
           </h1>
           
-          {/* Supporting line */}
-          <p className="text-xl md:text-2xl text-gray-600 mb-8 max-w-2xl mx-auto">
-            Minimal brutalist design meets modern performance
+          {/* Supporting line - concise value prop */}
+          <p className="text-xl text-neutral-600 mb-12 max-w-lg mx-auto">
+            Minimal brutalist framework for modern builders
           </p>
           
-          {/* CTA buttons */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-            <button className="btn-primary flex items-center gap-2">
+          {/* Primary CTA */}
+          <div className="mb-16">
+            <button className="btn-primary inline-flex items-center gap-3">
               Start Building
-              <ArrowRight size={20} />
-            </button>
-            <button className="btn-secondary">
-              View Examples
+              <ArrowRight size={18} />
             </button>
           </div>
           
-          {/* Neon accent icon */}
-          <div className="flex justify-center">
-            <Zap className="w-8 h-8 text-neon-cyan animate-pulse" />
+          {/* Neon accent icon - subtle focal point */}
+          <div className="flex justify-center mb-4">
+            <Zap className="w-6 h-6 text-neon-cyan animate-pulse-soft" />
           </div>
           
           {/* Microcopy */}
-          <p className="text-sm text-gray-600 mt-4">
-            No setup required • Deploy in minutes
+          <p className="text-sm text-neutral-600">
+            Deploy in minutes • No setup required
           </p>
         </div>
       </div>

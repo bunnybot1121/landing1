@@ -1,36 +1,37 @@
-import { Star } from 'lucide-react'
-
 const testimonials = [
   {
-    quote: "Brutal simplicity at its finest. Shipped our MVP in record time.",
+    quote: "Shipped our MVP in record time. Brutal simplicity works.",
     author: "Sarah Chen",
     role: "Founder, TechStart"
   },
   {
-    quote: "Finally, a framework that doesn't get in the way of building.",
-    author: "Marcus Rodriguez",
-    role: "Lead Developer, InnovateCorp"
+    quote: "Finally, a framework that doesn't get in the way.",
+    author: "Marcus Rodriguez", 
+    role: "Lead Dev, InnovateCorp"
   }
 ]
 
-const logos = [
+const trustedLogos = [
   "TECHSTART",
-  "INNOVATE",
+  "INNOVATE", 
   "BUILDFAST"
 ]
 
 export default function SocialProof() {
   return (
-    <section className="section-spacing bg-pastel-lavender">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Trusted by section */}
+    <section id="proof" className="section-md bg-pastel-lavender">
+      <div className="container-narrow">
+        {/* Trusted by logos */}
         <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-wide text-gray-600 mb-8">
-            Trusted by builders worldwide
+          <p className="text-xs uppercase tracking-wider text-neutral-600 mb-8">
+            Trusted by builders
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
-            {logos.map((logo, index) => (
-              <div key={index} className="font-display font-black text-lg md:text-xl text-gray-400 hover:text-gray-900 transition-colors">
+          <div className="flex justify-center items-center gap-12">
+            {trustedLogos.map((logo, index) => (
+              <div 
+                key={index} 
+                className="font-display font-bold text-lg text-neutral-400 hover:text-neutral-900 transition-colors"
+              >
                 {logo}
               </div>
             ))}
@@ -38,20 +39,15 @@ export default function SocialProof() {
         </div>
         
         {/* Testimonials */}
-        <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-8 max-w-3xl mx-auto">
           {testimonials.map((testimonial, index) => (
-            <div key={index} className="brutal-card p-8">
-              <div className="flex mb-4">
-                {[...Array(5)].map((_, i) => (
-                  <Star key={i} className="w-5 h-5 text-neon-yellow fill-current" />
-                ))}
-              </div>
-              <blockquote className="text-lg mb-6 leading-relaxed">
+            <div key={index} className="card-minimal p-8">
+              <blockquote className="text-base mb-6 leading-relaxed">
                 "{testimonial.quote}"
               </blockquote>
               <div>
-                <div className="font-bold">{testimonial.author}</div>
-                <div className="text-gray-600 text-sm">{testimonial.role}</div>
+                <div className="font-bold text-sm">{testimonial.author}</div>
+                <div className="text-neutral-600 text-xs">{testimonial.role}</div>
               </div>
             </div>
           ))}

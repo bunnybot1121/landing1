@@ -8,37 +8,52 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        // Pastel base colors
-        'pastel-pink': '#F8E8F5',
-        'pastel-blue': '#E8F4F8',
-        'pastel-mint': '#E8F8F5',
-        'pastel-peach': '#F8F0E8',
-        'pastel-lavender': '#F0E8F8',
+        // Refined pastel base colors (softer, more desaturated)
+        'pastel': {
+          'cream': '#FAF8F5',
+          'mint': '#F0F8F4',
+          'lavender': '#F4F0F8',
+          'peach': '#F8F4F0',
+          'sky': '#F0F4F8',
+        },
         
-        // Neon accents (used sparingly)
-        'neon-cyan': '#00FFFF',
-        'neon-pink': '#FF00FF',
-        'neon-green': '#00FF00',
-        'neon-yellow': '#FFFF00',
+        // Neon accents (used sparingly for focal elements)
+        'neon': {
+          'cyan': '#00E5FF',
+          'pink': '#FF0080',
+          'green': '#00FF88',
+        },
         
-        // Neutral grays
-        'gray-50': '#FAFAFA',
-        'gray-900': '#1A1A1A',
-        'gray-800': '#2A2A2A',
-        'gray-600': '#666666',
+        // Neutral system
+        'neutral': {
+          50: '#FAFAFA',
+          100: '#F5F5F5',
+          200: '#E5E5E5',
+          600: '#525252',
+          800: '#262626',
+          900: '#171717',
+        },
       },
       fontFamily: {
         'display': ['Inter', 'system-ui', 'sans-serif'],
         'body': ['Inter', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'display-xl': ['3.5rem', { lineHeight: '1.1', fontWeight: '900' }],
+        'display-lg': ['2.5rem', { lineHeight: '1.2', fontWeight: '800' }],
+        'display-md': ['1.875rem', { lineHeight: '1.3', fontWeight: '700' }],
       },
       spacing: {
         '18': '4.5rem',
         '88': '22rem',
       },
       boxShadow: {
-        'brutal': '4px 4px 0px 0px rgba(0,0,0,1)',
-        'brutal-sm': '2px 2px 0px 0px rgba(0,0,0,1)',
-        'neon': '0 0 10px currentColor',
+        'minimal': '0 2px 8px rgba(0,0,0,0.04)',
+        'lift': '0 4px 16px rgba(0,0,0,0.08)',
+        'neon-glow': '0 0 20px currentColor',
+      },
+      animation: {
+        'pulse-soft': 'pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite',
       },
     },
   },
