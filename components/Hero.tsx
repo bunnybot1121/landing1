@@ -1,42 +1,39 @@
-import { ArrowRight, Zap } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="section-lg bg-pastel-cream relative overflow-hidden">
-      {/* Minimal geometric accents */}
-      <div className="geometric-accent top-20 right-20 w-12 h-12 bg-neon-pink hidden lg:block"></div>
-      <div className="geometric-accent bottom-32 left-20 w-8 h-8 bg-neon-green hidden lg:block"></div>
+    <section className="section-spacing bg-pastel-cream relative overflow-hidden">
+      {/* Single geometric accent - minimal */}
+      <div className="geometric-accent top-20 right-20 w-8 h-8 bg-neon-pink hidden lg:block"></div>
       
-      <div className="container-narrow">
-        <div className="text-center">
-          {/* Hero headline - clear and confident */}
-          <h1 className="font-display text-display-xl mb-6 leading-none">
-            Ship Bold,
+      <div className="container-content">
+        <div className="max-w-3xl">
+          {/* Clear headline - confident and concise */}
+          <h1 className="font-display text-display-xl mb-6 leading-tight">
+            Ship Fast,
             <br />
-            <span className="neon-accent">Build Fast</span>
+            <span className="neon-accent">Build Bold</span>
           </h1>
           
-          {/* Supporting line - concise value prop */}
-          <p className="text-xl text-neutral-600 mb-12 max-w-lg mx-auto">
-            Minimal brutalist framework for modern builders
+          {/* Single supporting line */}
+          <p className="text-xl text-neutral-600 mb-8 max-w-md">
+            Minimal framework for modern builders
           </p>
           
-          {/* Primary CTA */}
-          <div className="mb-16">
-            <button className="btn-primary inline-flex items-center gap-3">
+          {/* Primary CTA with subtle secondary action */}
+          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+            <button className="btn-primary inline-flex items-center gap-2">
               Start Building
-              <ArrowRight size={18} />
+              <ArrowRight size={16} />
+            </button>
+            <button className="btn-secondary">
+              View Docs
             </button>
           </div>
           
-          {/* Neon accent icon - subtle focal point */}
-          <div className="flex justify-center mb-4">
-            <Zap className="w-6 h-6 text-neon-cyan animate-pulse-soft" />
-          </div>
-          
-          {/* Microcopy */}
-          <p className="text-sm text-neutral-600">
-            Deploy in minutes • No setup required
+          {/* Microcopy - essential info only */}
+          <p className="text-sm text-neutral-500">
+            Deploy in minutes • Zero config required
           </p>
         </div>
       </div>

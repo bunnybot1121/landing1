@@ -9,6 +9,7 @@
   
   body {
     @apply bg-pastel-cream text-neutral-900 antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
   }
   
   /* Enhanced focus styles for accessibility */
@@ -18,65 +19,64 @@
 }
 
 @layer components {
-  /* Primary CTA Button */
+  /* Primary CTA Button - refined with subtle neon accent */
   .btn-primary {
-    @apply bg-neutral-900 text-white px-8 py-4 font-bold text-sm uppercase tracking-wider 
+    @apply bg-neutral-900 text-white px-6 py-3 font-bold text-sm uppercase tracking-wide
+           border-2 border-transparent
            transition-all duration-200 ease-out
-           hover:shadow-lift hover:-translate-y-0.5 hover:shadow-neon-glow
-           focus:shadow-lift focus:-translate-y-0.5 focus:shadow-neon-glow
+           hover:border-neon-cyan hover:shadow-neon-subtle hover:-translate-y-0.5
+           focus:border-neon-cyan focus:shadow-neon-subtle focus:-translate-y-0.5
            active:translate-y-0;
   }
   
-  /* Secondary Button */
+  /* Secondary Button - minimal with hover state */
   .btn-secondary {
-    @apply border border-neutral-900 bg-transparent text-neutral-900 px-8 py-4 
-           font-medium text-sm uppercase tracking-wider
+    @apply border-2 border-neutral-300 bg-transparent text-neutral-900 px-6 py-3 
+           font-medium text-sm uppercase tracking-wide
            transition-all duration-200 ease-out
-           hover:bg-neutral-900 hover:text-white hover:-translate-y-0.5
-           focus:bg-neutral-900 focus:text-white focus:-translate-y-0.5;
+           hover:border-neutral-900 hover:-translate-y-0.5
+           focus:border-neutral-900 focus:-translate-y-0.5;
   }
   
-  /* Neon accent text (used sparingly) */
+  /* Neon accent - used sparingly */
   .neon-accent {
     @apply text-neon-cyan;
   }
   
-  /* Minimal card component */
+  /* Minimal card - clean with subtle elevation */
   .card-minimal {
-    @apply bg-white border border-neutral-200 shadow-minimal
+    @apply bg-white border border-neutral-200 p-6
            transition-all duration-200 ease-out
            hover:shadow-lift hover:-translate-y-1;
   }
   
-  /* Section spacing system */
-  .section-sm {
-    @apply py-12 md:py-16;
+  /* Geometric separator - brutalist accent */
+  .geometric-separator {
+    @apply relative;
   }
   
-  .section-md {
+  .geometric-separator::before {
+    content: '';
+    @apply absolute top-0 left-0 w-12 h-1 bg-neon-cyan;
+  }
+  
+  /* Container system - simplified */
+  .container-content {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  /* Section spacing - consistent rhythm */
+  .section-spacing {
     @apply py-16 md:py-24;
-  }
-  
-  .section-lg {
-    @apply py-20 md:py-32;
-  }
-  
-  /* Container system */
-  .container-narrow {
-    @apply max-w-4xl mx-auto px-4 sm:px-6 lg:px-8;
-  }
-  
-  .container-wide {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 }
 
-/* Geometric accent shapes */
+/* Minimal geometric accents - reduced visual noise */
 .geometric-accent {
-  @apply absolute opacity-10;
+  @apply absolute opacity-20 pointer-events-none;
 }
 
 .geometric-accent::before {
   content: '';
-  @apply absolute inset-0 bg-current transform rotate-12;
+  @apply absolute inset-0 bg-current;
 }

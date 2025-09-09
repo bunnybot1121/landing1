@@ -5,8 +5,8 @@ import './globals.css'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Brutal - Ship Bold, Build Fast',
-  description: 'Minimal brutalist framework for modern builders',
+  title: 'Brutal - Ship Fast, Build Bold',
+  description: 'Minimal framework for modern builders',
 }
 
 export default function RootLayout({

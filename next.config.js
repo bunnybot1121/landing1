@@ -1,8 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  experimental: {
-    appDir: true,
-  },
+  // Minimal configuration for Next.js 18
 }
 
 module.exports = nextConfig
